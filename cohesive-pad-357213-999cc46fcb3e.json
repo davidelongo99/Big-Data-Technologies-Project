@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cohesive-pad-357213",
+  "private_key_id": "999cc46fcb3e9d83b38c54abfc7d41adfd8c3c3a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZiSRE//K7EmrY\nFXv/95MrO1gzLmWG+uBUT+5Ztr0Bte0LJ00l1tE6TPB5qsgeayV3mvkT8WCT/u8w\n2gx2GRSbkxD8vbEmbRgX/SdaHvMLY8/k7qKWwwvWc0oOJbJ+8HLv4bAv8pFGeSvc\nOJXSxFnWtrHvoZ4dybgNh+VTRT1tmVstJV7O04iKGqP33qXRbwUvkoaEuxo2NBf2\nrvRMIEQt6LvxNCEfVzyvkyYu4pgixiBnOdXnIlvZAgNzd+A3S3MCWEMR7kNnO0WW\n5zzSmgWYWKU6SLujvZkLY4KrCdVDAHTOEUXqZyHpTbmOZ6U8DVOy2ijkp+CH3Vww\ntVQChRIDAgMBAAECggEALpe+Kf08Ky9drRyk64VGg0r5sDSu0ENpywU3wwVt5DDo\nLaxkTMd/FuKl2xlmNYWzh7Osx8W6bth6uNbrNlxW2p+cUtX6XIWfVHwHcrkQS488\nVwd50ZrDLVKSOQd//MpZg+GuEAb/cL3BVDDWfkdKCsAkynOuXyj2gAdsafJ5nsCF\nzKeXjvtgLdNlnRxfi/fNEwnGHSxK2sci3sLRJwnyu+PI/6n/3YS5V7OP2+6MwWMR\nWPSscogHuU9ryYBWywuMS2tr4sUYVraMxh2iA1YuWor2hjabAHh3folkbg+CVGDI\nxbZC0FHS/KWZTgz56lRHolklbsDB624oVbSjJoUDAQKBgQD60Nnfm+7t0aU5y/ke\naAlHqnZNfNTWgQntH1QGfbj/WhMwmz9TK8MpdCKS/X8EQFigvXLq+K6StBzEw+Dw\nGdeegdPmHpemjkntR7K2LjnMte3w8jpFdoET+y12EI/R4ge+djLC4aSc3RcMEr0M\n1N2wTutqbn6SEsGJpIHKPQX/gwKBgQDeCDHQhxQcNAaKdfpFcL2k9PtfzgZAqSV3\n7t56St9ioWqL+++Y3vDoF7uAsOqdKyTYY2XnrnK5KW8ZuEleUT2j5k5IhWJ7u0pj\nzhzVQ7tTAW7cdJu+ZVg9zy2fxZwE4FcbXrnTnX5OSkPh7B0gpmTNH+R2R4GeVZfE\n1eZODxmbgQKBgGIz+9ptd3NuLj8e+f9JxLhmqcNVKRCDnZtWNNQFzbVNU04ouvaZ\nn+RPMGpVDrJfb1QgWSpfDBssokb4Ws4nkCDjvE/RkpcIBzH8bKCgIMliQjOg4+fm\nqktkgTxE58rJsTaFmQJszsMMXcXAYHzxq4som0wkzzHqXhTCcH76vap5AoGAOaJ+\n69Zkjf2jRQXi9WuSjuNY7UGZtecyZrOG5M/StNOZyMSZKWGVv2mJrpo+DJZKdjE3\nHrDV7uKmiFKiGO2Vxpnd8E1PhzbS1J2INoPieGWC1Y8fboj4IvNIsJSnL0zcz6oD\nKr9TLhdxD5Au727B8803jMx7BRLK1rl/kvuwdgECgYEAgQ4r8JdUEmgglDBzQWgE\nWpgK7YpcexpgMv9ozR7Y0iJAlqeGuogaSC1VUNAbil3mwF+CdlHzCJ8HrwdCtsXB\nUlBXH/Nrl1X0i0BbPx9iroZR1XZFapiPVQTAe4MUtwmhqWah3tt94S8h58iCKDuC\nKIV1aYSmC/jwRkF5kAX5OdI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bdt-ranking@cohesive-pad-357213.iam.gserviceaccount.com",
+  "client_id": "115883976879829143130",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bdt-ranking%40cohesive-pad-357213.iam.gserviceaccount.com"
+}
