@@ -4,7 +4,7 @@ def urlopen(url1):
     webbrowser.open(url1)
 
 
-command = input("Choose: general, international, services, quality .")
+command = input("Choose: general, international, services, quality .").lower()
 if command == 'general':
     urlopen('google.com')        #Change when you get the general ranking
 elif command == 'international':
