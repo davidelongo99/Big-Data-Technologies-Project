@@ -5,6 +5,8 @@ def urlopen(url1):
 
 
 command = input("Choose: general, international, services, quality .").lower()
+# This way we can select the chosen parameter, while not being uppercase sensitive.
+
 if command == 'general':
     urlopen('google.com')        #Change when you get the general ranking
 elif command == 'international':
@@ -15,4 +17,5 @@ elif command == 'quality':
     urlopen('https://datastudio.google.com/reporting/f0250ab0-d94f-4cb4-b2e1-66198b98ff7b')
 else:
     print("Error! Ranking requested unavailable")
-urlopen(url)
+
+urlopen(url)  # Open desired page.
