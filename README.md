@@ -24,3 +24,11 @@ Is our main data processing script; starting from the original data, we create d
 
 Consists in a simple script used to visualize the rankings, produced externally using BigQuery and Google's Datastudio. 
 When run, it asks the user to choose the ranking he wants to see and, if given one of the four keywords (with or withour capital letters), it opens the corresponding ranking in a new browser page. These rankings are interactive, and can even be filtered by university size or type of entity (public or private).
+
+
+The three final rankings can be accessed using urlfinder.py, or visiting the links below:
+https://datastudio.google.com/reporting/f0250ab0-d94f-4cb4-b2e1-66198b98ff7b
+https://datastudio.google.com/reporting/c0912393-9e85-4097-a7cc-94a0ea40cd6a
+https://datastudio.google.com/reporting/99d44256-d1e6-432a-aea0-bc86dace4c90
+
+
