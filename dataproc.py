@@ -42,7 +42,7 @@ def create_cluster(project_id, region, cluster_name):
 
 
 project_id = "INSERT ID PROJECT"
-region = "europe-west8"
+region = "europe-west1"
 cluster_name = "py-cc-test-{}".format(str(uuid.uuid4()))
 
 create_cluster(project_id, region, cluster_name)
