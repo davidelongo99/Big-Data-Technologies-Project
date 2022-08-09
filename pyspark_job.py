@@ -1,12 +1,13 @@
 import pandas
 import pyspark
+import datetime
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, round
+from pyspark.sql.types import IntegerType
 
-spark = SparkSession.builder \
-    .master('local[*]') \
-    .config("spark.driver.memory", "15g") \
-    .appName('my-cool-app') \
+spark = SparkSession \
+    .builder \
+    .appName("Italian university ranking") \
     .getOrCreate()
 
 
@@ -147,7 +148,7 @@ def interventions(id_atenei, year):
     - year = the last two digits of the current year, i.e. 2022 --> 22 . 
     """
     for y in range(year-6, year):
-        df = spark.read.json(f'.\\data\\interventi_atenei_20{y}.json')
+        df = spark.read.json(f'gs://un_rank/interventi_atenei_20{y}.json')
         ay = df.collect()[0][0]
 
         for i in range(4, 9):
@@ -206,17 +207,47 @@ def score_interventions(isc_atenei, year):
     return df
 
 
-atenei = spark.read.json(r'.\data\atenei.json')
-imm_atenei = spark.read.json(r'.\data\imm_atenei.json')
-lau_atenei = spark.read.json(r'.\data\lau_atenei.json')
-isc_atenei = spark.read.json(r'.\data\isc_atenei.json')
-imm_forstd = spark.read.json(r'.\data\imm_forstd.json')
-lau_forstd = spark.read.json(r'.\data\lau_forstd.json')
-isc_forstd = spark.read.json(r'.\data\isc_forstd.json')
+def global_ranking(atenei, services, international_outlook, quality_education, year):
+    """
+    It returns a general ranking of the Italian universities, based on the scores of the three indexes. 
+    """
+    atenei_mod = atenei.filter(atenei.status == "Attivo    ")
+
+    for y in range(year-6, year):
+        df_s = services.select(col('AteneoCOD'), col(
+            f"score_int_{y-1}_{y}")).withColumnRenamed("AteneoCOD", "COD_Ateneo")
+
+        df_io = international_outlook.select(col("AteneoCOD"), col(
+            f"Perc_immfs_{y-1}_{y}")).withColumnRenamed("AteneoCOD", "COD_Ateneo")
+        df_1 = df_s.join(df_io, on="COD_Ateneo", how="full")
+
+        df_qe = quality_education.select(col("AteneoCOD"), col(
+            f"Perc_lau_20{y}")).withColumnRenamed("AteneoCOD", "COD_Ateneo")
+        df_2 = df_1.join(df_qe, on="COD_Ateneo", how="full")
+
+        df = df_2.withColumn(f"Score_20{y}", (col(f"Perc_lau_20{y}")
+                                              + col(f"Perc_immfs_{y-1}_{y}")
+                                              + col(f"score_int_{y-1}_{y}") / 3))\
+            .select("COD_Ateneo", f"Score_20{y}")
+
+        atenei_mod = atenei_mod.join(df, on="COD_Ateneo", how="full")
+
+    return atenei_mod
+
+gcs_bucket = 'bucket_name'
+
+atenei = spark.read.json(f'gs://{bucket_name}/atenei.json')
+imm_atenei = spark.read.json(f'gs://{bucket_name}/imm_atenei.json')
+lau_atenei = spark.read.json(f'gs://{bucket_name}/lau_atenei.json')
+isc_atenei = spark.read.json(f'gs://{bucket_name}/isc_atenei.json')
+imm_forstd = spark.read.json(f'gs://{bucket_name}/imm_forstd.json')
+lau_forstd = spark.read.json(f'gs://{bucket_name}/lau_forstd.json')
+isc_forstd = spark.read.json(f'gs://{bucket_name}/isc_forstd.json')
 
 id_atenei = atenei.select('COD_Ateneo').withColumnRenamed(
     'COD_Ateneo', 'COD_ATENEO')
-year = 22
+
+year = int(str(datetime.date.today().year)[-2:])
 
 df_lau = lau_by_year(lau_atenei)
 df_isc = isc_by_year(isc_atenei)
@@ -226,3 +257,24 @@ df_immfs = immforst_by_year(imm_forstd)
 df_qoe = perc_lau(df_lau, df_isc, atenei)      # quality of education index
 df_intout = perc_forst_imm(df_immfs, df_imm)  # international outlook index
 df_services = score_interventions(isc_atenei, year)        # services index
+df_general = global_ranking(
+    atenei, df_services, df_intout, df_qoe, year)  # general ranking
+
+
+gcs_filepath = 'gs://{}'.format(gcs_bucket)
+
+df_services.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)
+
+df_qoe.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)
+
+df_intout.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)
+
+df_general.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)

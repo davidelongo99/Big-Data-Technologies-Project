@@ -1,5 +1,5 @@
 # create_cluster
-
+import uuid
 import sys
 from google.cloud import dataproc_v1 as dataproc
 
@@ -41,7 +41,7 @@ def create_cluster(project_id, region, cluster_name):
     # [END dataproc_create_cluster]
 
 
-project_id = "INSERT ID PROJECT"
+project_id = "INSERT PROJECT ID"
 region = "europe-west1"
 cluster_name = "py-cc-test-{}".format(str(uuid.uuid4()))
 
