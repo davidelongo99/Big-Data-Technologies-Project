@@ -20,10 +20,14 @@ Creates clusters on Google Dataproc. We chose the server europe-west8 as it is t
 
 Is our main data processing script; starting from the original data, we create dataframes containing the columns we are interested in, with the appropriate attributes and data type.
 
+- scheduler.py
+
+Allows us to repeat the three steps above on a weekly basis, every monday.
+
 - urlfinder.py 
 
 Consists in a simple script used to visualize the rankings, produced externally using BigQuery and Google's Datastudio. 
-When run, it asks the user to choose the ranking he wants to see and, if given one of the four keywords (with or withour capital letters), it opens the corresponding ranking in a new browser page. These rankings are interactive, and can even be filtered by university size or type of entity (public or private).
+When run, it asks the user to choose the ranking he wants to see and, if given one of the four keywords (with or withour capital letters), it opens the corresponding ranking in a new browser page. These rankings are interactive and updated in realt time, and can even be filtered by university size or type of entity (public or private).
 
 
 The three final rankings can be accessed using urlfinder.py, or visiting the links below:
