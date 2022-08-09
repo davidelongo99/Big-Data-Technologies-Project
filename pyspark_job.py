@@ -259,7 +259,21 @@ df_services = score_interventions(isc_atenei, year)        # services index
 df_general = global_ranking(
     atenei, df_services, df_intout, df_qoe, year)  # general ranking
 
-df_qoe.write.csv('quality_of_education.csv')
-df_intout.write.csv('international_outlook.csv')
-df_services.write.csv('services.csv')
-df_general.write.csv('general_ranking.csv')
+gcs_bucket = 'bucket_name'
+gcs_filepath = 'gs://{}'.format(gcs_bucket)
+
+df_services.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)
+
+df_qoe.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)
+
+df_intout.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)
+
+df_general.coalesce(1).write.format('csv') \
+    .mode('overwrite') \
+    .save(gcs_filepath)
