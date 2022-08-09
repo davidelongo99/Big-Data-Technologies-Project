@@ -41,7 +41,7 @@ def create_cluster(project_id, region, cluster_name):
     # [END dataproc_create_cluster]
 
 
-project_id = "bdt-project-357610"
+project_id = "INSERT PROJECT ID"
 region = "europe-west1"
 cluster_name = "py-cc-test-{}".format(str(uuid.uuid4()))
 
