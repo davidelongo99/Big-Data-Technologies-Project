@@ -234,14 +234,15 @@ def global_ranking(atenei, services, international_outlook, quality_education, y
 
     return atenei_mod
 
+gcs_bucket = 'bucket_name'
 
-atenei = spark.read.json('gs://un_rank/atenei.json')
-imm_atenei = spark.read.json('gs://un_rank/imm_atenei.json')
-lau_atenei = spark.read.json('gs://un_rank/lau_atenei.json')
-isc_atenei = spark.read.json('gs://un_rank/isc_atenei.json')
-imm_forstd = spark.read.json('gs://un_rank/imm_forstd.json')
-lau_forstd = spark.read.json('gs://un_rank/lau_forstd.json')
-isc_forstd = spark.read.json('gs://un_rank/isc_forstd.json')
+atenei = spark.read.json(f'gs://{bucket_name}/atenei.json')
+imm_atenei = spark.read.json(f'gs://{bucket_name}/imm_atenei.json')
+lau_atenei = spark.read.json(f'gs://{bucket_name}/lau_atenei.json')
+isc_atenei = spark.read.json(f'gs://{bucket_name}/isc_atenei.json')
+imm_forstd = spark.read.json(f'gs://{bucket_name}/imm_forstd.json')
+lau_forstd = spark.read.json(f'gs://{bucket_name}/lau_forstd.json')
+isc_forstd = spark.read.json(f'gs://{bucket_name}/isc_forstd.json')
 
 id_atenei = atenei.select('COD_Ateneo').withColumnRenamed(
     'COD_Ateneo', 'COD_ATENEO')
@@ -259,7 +260,7 @@ df_services = score_interventions(isc_atenei, year)        # services index
 df_general = global_ranking(
     atenei, df_services, df_intout, df_qoe, year)  # general ranking
 
-gcs_bucket = 'bucket_name'
+
 gcs_filepath = 'gs://{}'.format(gcs_bucket)
 
 df_services.coalesce(1).write.format('csv') \
