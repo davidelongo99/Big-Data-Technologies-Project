@@ -8,7 +8,7 @@ command = input("Choose: general, international, services, quality .").lower()
 # This way we can select the chosen parameter, while not being uppercase sensitive.
 
 if command == 'general':
-    urlopen('https://datastudio.google.com/reporting/08e06bfa-aec0-474b-8998-15791b4140ac')        #Change when you get the general ranking
+    urlopen('https://datastudio.google.com/reporting/08e06bfa-aec0-474b-8998-15791b4140ac')
 elif command == 'international':
     urlopen('https://datastudio.google.com/reporting/c0912393-9e85-4097-a7cc-94a0ea40cd6a')
 elif command == 'services':
