@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cohesive-pad-357213",
+  "private_key_id": "fe5a29e48951eedfd5b4eb700e283300a9d675ea",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYhCzjmZFbAKa7\n1zUcr9+fOOqVobcTwtCWMGl4Ub7mMIuo26XY1nwnnkoOgBQftfWZLKvd3dDyLZTY\nIKYpS5LquJYwYiKS1CNcpbL9j0g+klT5aNkiz4d5U329hBGgVH7N1jG62d4z4NGl\n8AG5uc4LnCxPnm0xj+BssS7HROyaIxG7+AudKJxKka8StetiwxliORX+wdwYqlTn\nJWMs23mQFfOFtFbd8G6h/8wtOqkLDbVX/DMbsYY27pAyOyEQn5byWTSVUDAijekz\nooPun/ZDGif0J93Ipjt8qRJc3k9ixJaH/OuK8p9ax65UWYII00umYAGnKt1uXa7V\nnu/S5oc/AgMBAAECggEAM/wJWOKFGuGT8z6dSdPgguLhgnMGdePXOPnzWSFz0f4F\n/F4xn0EsPEzFrT+WnGBm//ir9AmhKIrEyw4F1Nl/kCWue3tXkXhhPTj1U1u9Iia6\nc/B64lSeNopwt2IGqAFk3z/831VXWZNtogO2ctmUE3z91X2IdnY15pZV/XHOu5Jl\nc5tvObukyWoyZmBS+1lZmYN4/Gc9ihxxAd3vn8IaTIsPHGcGfF/1mf64eIXUHp91\nmC9gWPZUu5DcV4BH1kqdlPc5Z5yv9qzFj0vLz6Z9B6aaxTutjziwUkSfK/cqe/H4\n7UEgOqp79fTE1kfUjcrtGrPvZA4IPeM7/AVwY+al4QKBgQDUNrx4bmsImwnD+X3H\ngq8RxJ0oQUhnfmeCVoBGFc4fwnaMm4KdgtAPmafHySPa1rnP9o1RS1ilDWY9Lrlj\n4lEV3WNjXZkbiTFN/F8yGkQNvphNzToAmeqzMyIKFEHki5AQSyHaho4oNhoMNEIF\n96llir8SOsS8yA69CAoHWoy0qQKBgQC3/C4uBUpHyJJlKr7IcudYvqAYMMMrMgS3\nxG9HbYjegYifd1CQogmiX7DCo/cfM1jSSrUsZMAMb/67qjlXJ6GvOc6qJsC8Igdc\nqjG0NgUrQsCUujwPWGwYSUmWtJYEcRDZlfhpJjEvU/pcwXHrcUaP7keitVa+ksk6\nMd2nPuZlpwKBgDHbTjopDuJtskSlh+RokoLlI1sCw2T1MJJRij9s/gk+IaX1HyGs\nSv9vRRjN66uNSQhPz3Gq9v+H/14ebRXHZO9zHNeKdN8gQ0IkKaVWwGhOP+//aEId\n5yMEv1mI2tY757O8Qw7ZD+rokwQM/vnx7o1ZpHw+7FvB0Jyel+SUZHxJAoGBAJaw\noG4m/RDQMT9VBE+O9PbVorBNd/ywCfctl2rsRtbfRzQ8+CqN3NA2CcNRojzWxF/w\nunTyy+0j6YJxSGee2Sl4clEgTmmIgXkfGHieahtln+/wnPKAnIBDvlcF730R0hg0\nYfJVSqGV6ZABDLom3AFUyy1z0ulhthjI8N9jgDcvAoGAO1nA4Q7gdZwQG8BFPDfy\nZLF84FKQZ+MVgBfSPngR7FNyyqusSbZtuJJSQfTCRL+b+bOUOjuLTEYYwsu2YSRq\n0eFvoUB/HTFTrvELexCVI/wLMqaTHAbSJ72XsmKV51ZNdAAIM3sPy0m+9p8rCLw9\n3zqd6Q2mHHze4l3xrcUyv6g=\n-----END PRIVATE KEY-----\n",
+  "client_email": "ultimo-basta-credo@cohesive-pad-357213.iam.gserviceaccount.com",
+  "client_id": "116182205885675157825",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ultimo-basta-credo%40cohesive-pad-357213.iam.gserviceaccount.com"
+}
