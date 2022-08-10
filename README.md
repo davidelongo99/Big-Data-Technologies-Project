@@ -32,10 +32,10 @@ When run, it asks the user to choose the ranking he wants to see and, if given o
 
 The four final rankings can be accessed using urlfinder.py, or visiting the links below:
 
-https://datastudio.google.com/reporting/f0250ab0-d94f-4cb4-b2e1-66198b98ff7b     --> Quality of Education
+[Quality of Education](https://datastudio.google.com/reporting/f0250ab0-d94f-4cb4-b2e1-66198b98ff7b)
 
-https://datastudio.google.com/reporting/c0912393-9e85-4097-a7cc-94a0ea40cd6a     --> International Outlook
+[International Outlook](https://datastudio.google.com/reporting/c0912393-9e85-4097-a7cc-94a0ea40cd6a)
 
-https://datastudio.google.com/reporting/99d44256-d1e6-432a-aea0-bc86dace4c90     --> Student services
+[Student services](https://datastudio.google.com/reporting/99d44256-d1e6-432a-aea0-bc86dace4c90)
 
-https://datastudio.google.com/reporting/08e06bfa-aec0-474b-8998-15791b4140ac     --> General 
+[General](https://datastudio.google.com/reporting/08e06bfa-aec0-474b-8998-15791b4140ac)
